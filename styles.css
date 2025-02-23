@@ -11,6 +11,30 @@
     --container-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: var(--spacing-unit);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: var(--border-radius);
+    box-shadow: var(--container-shadow);
+}
+
 .helpline-banner {
     background-color: #2d3748;
     color: white;
@@ -20,7 +44,6 @@
     line-height: 1.6;
     margin-bottom: calc(var(--spacing-unit) * 1.5);
     border-radius: var(--border-radius);
-    box-shadow: var(--container-shadow);
 }
 
 .helpline-banner p {
@@ -42,43 +65,6 @@
 .helpline-number:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
-}
-
-@media (max-width: 600px) {
-    .helpline-banner {
-        font-size: 1rem;
-        padding: var(--spacing-unit);
-    }
-    
-    .helpline-banner p {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.7;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    padding: var(--spacing-unit);
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: calc(var(--spacing-unit) * 1.5);
-    border-radius: var(--border-radius);
-    box-shadow: var(--container-shadow);
 }
 
 header {
@@ -135,6 +121,14 @@ input:focus, select:focus, textarea:focus {
     border-color: var(--secondary-color);
     background-color: white;
     box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
+}
+
+section {
+    background: white;
+    padding: calc(var(--spacing-unit) * 1.5);
+    border-radius: var(--border-radius);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    border: 1px solid var(--border-color);
 }
 
 .operators-grid {
@@ -224,14 +218,6 @@ footer {
     font-size: 0.95rem;
 }
 
-section {
-    background: white;
-    padding: calc(var(--spacing-unit) * 1.5);
-    border-radius: var(--border-radius);
-    margin-bottom: calc(var(--spacing-unit) * 2);
-    border: 1px solid var(--border-color);
-}
-
 /* Validation Styles */
 input:invalid, select:invalid, textarea:invalid {
     border-color: var(--error-color);
@@ -253,6 +239,17 @@ input:invalid, select:invalid, textarea:invalid {
 
     .operators-grid {
         grid-template-columns: 1fr;
+    }
+
+    .helpline-banner {
+        font-size: 1rem;
+        padding: var(--spacing-unit);
+    }
+    
+    .helpline-banner p {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 }
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Stop: Take A Break From Betting Today</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="helpline-banner">
+        <p>For Free Treatment and Counselling, call Responsible Gambling Toll-Free Counselling Line at 
+            <a href="tel:0800006008" class="helpline-number">0800 006 008</a> 
+            or WhatsApp 
+            <a href="https://wa.me/27766750710" class="helpline-number">076 675 0710</a>
+        </p>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Bet Stop: Take A Break From Betting Today</h1>
+            <p class="subtitle">Thinking about stopping? We know it's not easy, but you can ask betting sites to block you from playing - many people find this helps them break free. This tool makes it simpler: instead of dealing with each site one by one, you only need to fill in one form.</p>
+        </header>
+
+        <main>
+            <form id="exclusionForm" class="exclusion-form">
+                <section class="personal-details">
+                    <h2>1. Personal Details</h2>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idNumber">ID Number *</label>
+                        <input type="text" id="idNumber" name="idNumber" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required
+                               pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exclusionPeriod">Exclusion Period *</label>
+                        <select id="exclusionPeriod" name="exclusionPeriod" required>
+                            <option value="">Select period</option>
+                            <option value="3">3 months</option>
+                            <option value="6">6 months</option>
+                            <option value="12">12 months</option>
+                            <option value="permanent">Permanent</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="operator-selection">
+                    <h2>2. Select Betting Operators</h2>
+                    <div class="operators-grid" id="operatorsGrid">
+                        <!-- Operators will be populated via JavaScript -->
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Generate Emails</button>
+                </div>
+            </form>
+        </main>
+
+        <div id="emailLinks" class="email-links hidden">
+            <h2>3. Send Emails</h2>
+            <div id="emailLinksContainer"></div>
+        </div>
+
+        <footer>
+            <p>Privacy Notice: All information stays in your browser. Nothing is stored or transmitted.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

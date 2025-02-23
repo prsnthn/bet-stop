@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Generate email content
 function generateEmailContent(formData, operators) {
     const date = new Date().toISOString().split('T')[0];
-    const period = formData.exclusionPeriod === 'permanent' 
-        ? 'permanent' 
-        : `${formData.exclusionPeriod} months`;
+    const exclusionText = formData.exclusionPeriod === 'permanent' 
+        ? 'I wish to be excluded permanently.' 
+        : `I wish to be excluded for a period of ${formData.exclusionPeriod} months.`;
 
     return `Dear Sir/Madam,
 
@@ -43,7 +43,7 @@ Personal Details:
 - Email: ${formData.email}
 - Phone: ${formData.phone}
 
-I wish to be excluded for a period of ${period}.
+${exclusionText}
 
 Please confirm receipt of this request and its implementation.
 

@@ -19,12 +19,52 @@
     <link rel="canonical" href="https://bet-stop.vercel.app/">
     
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYF71XMX4P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-EYF71XMX4P');
+
+        // Custom event tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track form submissions
+            document.getElementById('exclusionForm').addEventListener('submit', function() {
+                gtag('event', 'form_submission', {
+                    'event_category': 'engagement',
+                    'event_label': 'self_exclusion_form'
+                });
+            });
+
+            // Track exclusion period selection
+            document.getElementById('exclusionPeriod').addEventListener('change', function(e) {
+                gtag('event', 'exclusion_period_selected', {
+                    'event_category': 'form_interaction',
+                    'event_label': e.target.value
+                });
+            });
+
+            // Track operator selections
+            document.getElementById('operatorsGrid').addEventListener('change', function(e) {
+                if (e.target.type === 'checkbox') {
+                    gtag('event', 'operator_selected', {
+                        'event_category': 'form_interaction',
+                        'event_label': e.target.value,
+                        'selected': e.target.checked
+                    });
+                }
+            });
+
+            // Track email link clicks
+            document.getElementById('emailLinksContainer').addEventListener('click', function(e) {
+                if (e.target.classList.contains('email-link')) {
+                    gtag('event', 'email_link_click', {
+                        'event_category': 'conversion',
+                        'event_label': 'send_exclusion_emails'
+                    });
+                }
+            });
+        });
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>

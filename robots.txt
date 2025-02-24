@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://bet-stop.vercel.app/sitemap.xml
+
+# Disallow access to any sensitive files
+Disallow: /token.txt 

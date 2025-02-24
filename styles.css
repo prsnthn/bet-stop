@@ -349,4 +349,110 @@ input:invalid, select:invalid, textarea:invalid {
     .faq-item {
         padding: calc(var(--spacing-unit) * 0.8);
     }
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: var(--spacing-unit);
+    padding: calc(var(--spacing-unit) * 0.8) 0;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    color: #718096;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "/";
+    margin: 0 8px;
+    color: #CBD5E0;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: var(--secondary-color);
+}
+
+/* Signs Section */
+.signs-section {
+    margin: calc(var(--spacing-unit) * 2) 0;
+    padding: calc(var(--spacing-unit) * 2);
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.signs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-unit);
+    margin-top: calc(var(--spacing-unit) * 1.5);
+}
+
+.sign-item {
+    padding: calc(var(--spacing-unit) * 1.2);
+    background: #f8fafc;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.sign-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--container-shadow);
+}
+
+.sign-item h3 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 0.8);
+    font-size: 1.2rem;
+}
+
+.sign-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sign-item li {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+    color: #4a5568;
+    padding-left: calc(var(--spacing-unit) * 1.2);
+    position: relative;
+}
+
+.sign-item li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+    .signs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .signs-section {
+        padding: var(--spacing-unit);
+    }
+    
+    .sign-item {
+        padding: calc(var(--spacing-unit) * 0.8);
+    }
 } 

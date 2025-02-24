@@ -8,7 +8,9 @@ const BETTING_OPERATORS = [
     { name: 'World Sport Betting', email: 'support@wsb.co.za' },
     { name: 'SupaBets', email: 'support@supabets.co.za' },
     { name: 'Bet.co.za', email: 'support@bet.co.za' },
-    { name: 'ScoreBet', email: 'support@scorebet.co.za' }
+    { name: 'ScoreBet', email: 'support@scorebet.co.za' },
+    { name: 'YesPlay', email: 'support@yesplay.bet' },
+    { name: 'Jackpot City', email: 'responsiblegambling@jackpotcity.co.za' }
 ];
 
 // Populate operators grid on page load

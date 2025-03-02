@@ -95,4 +95,44 @@ document.getElementById('exclusionForm').addEventListener('submit', (e) => {
     
     // Scroll to email links
     document.getElementById('emailLinks').scrollIntoView({ behavior: 'smooth' });
-}); 
+});
+
+// Geolocation check for South African visitors
+async function checkCountryAccess() {
+    try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        
+        // If not in South Africa, show warning
+        if (data.country_code !== 'ZA') {
+            // Only show warning if middleware didn't already block
+            const warningBanner = document.createElement('div');
+            warningBanner.className = 'country-warning';
+            warningBanner.innerHTML = `
+                <div class="warning-content">
+                    <p><strong>Notice:</strong> This service is designed for South African users. Some features may not work correctly in your region (${data.country_name}).</p>
+                    <button id="close-warning">Understand</button>
+                </div>
+            `;
+            document.body.prepend(warningBanner);
+            
+            // Add event listener to close button
+            document.getElementById('close-warning').addEventListener('click', function() {
+                warningBanner.style.display = 'none';
+            });
+            
+            // Track non-SA visitors in analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'non_sa_visitor', {
+                    'event_category': 'geo',
+                    'event_label': data.country_code
+                });
+            }
+        }
+    } catch (error) {
+        console.error('Error checking location:', error);
+    }
+}
+
+// Run the check when the page loads
+window.addEventListener('DOMContentLoaded', checkCountryAccess); 

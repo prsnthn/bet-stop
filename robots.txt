@@ -1,6 +1,12 @@
 User-agent: *
 Allow: /
+
+# Sitemap declaration
 Sitemap: https://betstop.co.za/sitemap.xml
 
 # Disallow access to any sensitive files
-Disallow: /token.txt 
+Disallow: /token.txt
+
+# Language targeting hint
+X-Language: en-ZA
+X-Geographic-Area: South Africa 

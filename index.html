@@ -100,9 +100,9 @@
 <body>
     <div class="container">
         <div class="helpline-banner">
-            <p>For Free Treatment and Counselling, call Responsible Gambling Toll-Free Counselling Line at 
+            <p>For Free Treatment and Counselling in South Africa, call the National Responsible Gambling Programme (NRGP) at 
                 <a href="tel:0800006008" class="helpline-number">0800 006 008</a> 
-                or WhatsApp 
+                or WhatsApp the NRGP Counsellor at 
                 <a href="https://wa.me/27766750710" class="helpline-number">076 675 0710</a>
             </p>
         </div>
@@ -116,7 +116,7 @@
                         <meta itemprop="position" content="1" />
                     </li>
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name">Self-Exclusion Form</span>
+                        <span itemprop="name">SA Betting Site Self-Exclusion</span>
                         <meta itemprop="position" content="2" />
                     </li>
                 </ol>
@@ -128,22 +128,23 @@
                 <div class="logo-text">Bet Stop</div>
                 <div class="logo-accent"></div>
             </div>
-            <h1>How to Stop Compulsive Gambling</h1>
-            <p class="subtitle">Struggling with compulsive gambling? You're not alone. Many people find self-exclusion to be an effective compulsive gambling treatment—and we make it easy. Instead of blocking betting sites one by one, fill out one simple form to take a break from gambling today.</p>
+            <h1>Stop Problem Gambling in South Africa</h1>
+            <p class="subtitle">Struggling with problem gambling in SA? You're not alone. According to the NRGP, over 2.5 million South Africans are at risk of problem gambling. Our free tool helps you self-exclude from major SA betting sites like Hollywoodbets, Betway, and more—all through one simple form.</p>
         </header>
 
         <main>
             <form id="exclusionForm" class="exclusion-form">
                 <section class="personal-details">
-                    <h2>1. Personal Details</h2>
+                    <h2>1. Your Details</h2>
                     <div class="form-group">
-                        <label for="fullName">Full Name *</label>
+                        <label for="fullName">Full Name (as per SA ID) *</label>
                         <input type="text" id="fullName" name="fullName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="idNumber">ID Number *</label>
-                        <input type="text" id="idNumber" name="idNumber" required>
+                        <label for="idNumber">SA ID Number *</label>
+                        <input type="text" id="idNumber" name="idNumber" required 
+                               pattern="[0-9]{13}" title="Please enter a valid 13-digit South African ID number">
                     </div>
 
                     <div class="form-group">
@@ -152,9 +153,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number *</label>
+                        <label for="phone">Cell Number *</label>
                         <input type="tel" id="phone" name="phone" required
-                               pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                               pattern="0[0-9]{9}" title="Please enter a valid 10-digit South African mobile number starting with 0">
                     </div>
 
                     <div class="form-group">
@@ -163,132 +164,118 @@
                             <option value="">Select period</option>
                             <option value="3">3 months</option>
                             <option value="6">6 months</option>
-                            <option value="12">12 months</option>
+                            <option value="12">12 months (recommended)</option>
                             <option value="permanent">Permanent</option>
                         </select>
                     </div>
                 </section>
 
                 <section class="operator-selection">
-                    <h2>2. Select Betting Operators</h2>
+                    <h2>2. Select SA Betting Sites</h2>
                     <div class="operators-grid" id="operatorsGrid">
-                        <!-- Operators will be populated via JavaScript -->
+                        <!-- Operators populated via JavaScript -->
                     </div>
                 </section>
 
                 <div class="form-actions">
-                    <button type="submit" class="btn-primary">Generate Emails</button>
+                    <button type="submit" class="btn-primary">Generate Self-Exclusion Emails</button>
                 </div>
             </form>
         </main>
 
         <section class="info-section">
-            <h2>Understanding Gambling Self-Exclusion</h2>
-            <p>Self-exclusion is a proven method to help control compulsive gambling behavior. When you self-exclude, betting operators are legally required to block your access to their platforms for your chosen period.</p>
+            <h2>Understanding Gambling Self-Exclusion in South Africa</h2>
+            <p>Self-exclusion is a free tool regulated by the National Gambling Board of South Africa. When you self-exclude, betting operators are legally required under the National Gambling Act to block your access to their platforms for your chosen period.</p>
             
             <div class="benefits-grid">
                 <div class="benefit-item">
-                    <h3>Immediate Action</h3>
-                    <p>Take control today by blocking access to multiple betting sites at once.</p>
+                    <h3>Immediate Protection</h3>
+                    <p>Block access to multiple SA betting sites at once, including online and retail betting shops.</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>Legal Protection</h3>
-                    <p>Operators are legally required to honor your self-exclusion request.</p>
+                    <h3>Legal Backing</h3>
+                    <p>Protected by SA gambling laws - operators must honour your self-exclusion request or face penalties.</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>Privacy Assured</h3>
-                    <p>Your information stays in your browser - we don't store any personal data.</p>
+                    <h3>Free & Confidential</h3>
+                    <p>No cost to you, and your information is protected under the POPI Act.</p>
                 </div>
             </div>
         </section>
 
         <section class="signs-section">
-            <h2>Signs of Problem Gambling</h2>
-            <p>Recognizing the signs of problem gambling is the first step toward recovery. If you experience any of these symptoms, consider self-exclusion and professional help:</p>
+            <h2>Signs of Problem Gambling in SA</h2>
+            <p>The NRGP reports that 1 in 10 South Africans are at risk of developing a gambling problem. Common warning signs include:</p>
             
             <div class="signs-grid">
                 <div class="sign-item">
-                    <h3>Financial Signs</h3>
+                    <h3>Financial Warning Signs</h3>
                     <ul>
-                        <li>Borrowing money to gamble</li>
-                        <li>Missing bill payments due to betting</li>
-                        <li>Selling possessions to fund gambling</li>
+                        <li>Taking loans or using stokvels for gambling</li>
+                        <li>Missing bond/rent payments due to betting</li>
+                        <li>Using grocery or school fee money to gamble</li>
                     </ul>
                 </div>
                 <div class="sign-item">
-                    <h3>Behavioral Signs</h3>
+                    <h3>Behavioural Changes</h3>
                     <ul>
-                        <li>Gambling with increasing amounts</li>
-                        <li>Unable to stop or cut back</li>
-                        <li>Lying about gambling activities</li>
+                        <li>Betting more than you can afford to lose</li>
+                        <li>Gambling during work hours</li>
+                        <li>Hiding betting slips from family</li>
                     </ul>
                 </div>
                 <div class="sign-item">
-                    <h3>Emotional Signs</h3>
+                    <h3>Emotional Impact</h3>
                     <ul>
-                        <li>Feeling restless when not gambling</li>
-                        <li>Using gambling to escape problems</li>
-                        <li>Experiencing guilt after gambling</li>
+                        <li>Feeling anxious when not gambling</li>
+                        <li>Using gambling to escape life's problems</li>
+                        <li>Depression after losing money</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2>Frequently Asked Questions About Gambling Self-Exclusion</h2>
+            <h2>Common Questions About SA Gambling Self-Exclusion</h2>
             
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is gambling self-exclusion?</h3>
+                <h3 itemprop="name">How does self-exclusion work in South Africa?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Self-exclusion is a tool that allows you to voluntarily ban yourself from gambling platforms for a set period. Once activated, operators must prevent you from accessing their betting services.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How long does self-exclusion last?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">You can choose to self-exclude for 3 months, 6 months, 12 months, or permanently. Once set, the exclusion cannot be reversed until the chosen period expires.</p>
+                    <p itemprop="text">Under SA gambling regulations, self-exclusion is a legal right that allows you to ban yourself from betting platforms. Once activated, operators must block your access to both online betting and physical betting shops.</p>
                 </div>
             </div>
             
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What happens after I submit the form?</h3>
+                <h3 itemprop="name">What happens to my betting account winnings?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Your self-exclusion request will be sent directly to the selected betting operators. They will process your request and confirm via email. Most operators implement the exclusion within 24 hours.</p>
+                    <p itemprop="text">According to SA gambling laws, operators must return your account balance to your registered bank account. However, any pending bets may be voided, and winnings from bets placed after requesting exclusion won't be paid out.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Can I still collect my sports betting winnings after self-excluding?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Yes, you can collect legitimate winnings from bets placed before your self-exclusion. Contact the NRGP on 0800 006 008 if you need help claiming your winnings during self-exclusion.</p>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I cancel my self-exclusion once it's active?</h3>
+                <h3 itemprop="name">Will this affect my credit score or bank accounts?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">No, self-exclusion cannot be cancelled or reversed during the chosen period. This strict policy ensures the effectiveness of the program in helping people overcome gambling addiction.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What happens to my existing betting accounts?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">When you self-exclude, operators will close or suspend your betting accounts. Any funds in your accounts should be returned to you, but winnings from bets placed after requesting exclusion may be voided.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Will self-exclusion affect my credit score?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">No, self-exclusion does not affect your credit score or appear on your credit report. It's a private arrangement between you and the betting operators to help you stop gambling.</p>
+                    <p itemprop="text">No, self-exclusion doesn't affect your credit score or TransUnion record. It's a private arrangement between you and betting operators, protected under SA privacy laws.</p>
                 </div>
             </div>
         </section>
 
         <div id="emailLinks" class="email-links hidden">
-            <h2>3. Send Emails</h2>
+            <h2>3. Send Your Self-Exclusion Request</h2>
             <div id="emailLinksContainer"></div>
         </div>
 
         <footer>
-            <p>Privacy Notice: All information stays in your browser. Nothing is stored or transmitted.</p>
-            <p>Need immediate help? Contact the National Gambling Crisis Helpline: <a href="tel:0800006008">0800 006 008</a></p>
-            <p>Looking for more support? Visit the <a href="https://responsiblegambling.org.za" target="_blank" rel="noopener">National Responsible Gambling Programme</a></p>
+            <p>Privacy Notice: Your information is protected under the POPI Act. Nothing is stored on our servers.</p>
+            <p>Need help now? Call the NRGP 24/7 Problem Gambling Counselling Line: <a href="tel:0800006008">0800 006 008</a></p>
+            <p>For more support, visit the <a href="https://responsiblegambling.org.za" target="_blank" rel="noopener">National Responsible Gambling Programme</a> or <a href="https://www.ngb.org.za" target="_blank" rel="noopener">National Gambling Board</a></p>
         </footer>
     </div>
 
